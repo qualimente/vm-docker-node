@@ -13,7 +13,10 @@
       "type": "amazon-ebs",
       "region": "us-west-2",
       "source_ami": "ami-e535c59d",
-      "ami_regions": ["us-east-2"],
+      "run_tags": {
+        "Name": "Packer Builder - {{user `ami_name`}} {{isotime | clean_ami_name}}"
+      },
+      "ami_regions": ["us-east-1", "us-east-2"],
       "instance_type": "t2.medium",
       "communicator": "ssh",
       "ssh_pty": true,

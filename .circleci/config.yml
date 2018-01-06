@@ -1,0 +1,17 @@
+version: 2
+
+packer: &packer
+  docker:
+    - image: hashicorp/packer:full
+
+jobs:
+  build:
+    <<: *packer
+    steps:
+      - checkout
+      - run:
+          name: validate
+          command: packer validate packer.json
+      - run:
+          name: build
+          command: packer build packer.json
