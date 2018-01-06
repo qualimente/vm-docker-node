@@ -2,7 +2,7 @@ version: 2
 
 packer: &packer
   docker:
-    - image: hashicorp/packer:full
+    - image: hashicorp/packer:light
 
 jobs:
   build:
