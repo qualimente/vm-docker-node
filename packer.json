@@ -12,7 +12,15 @@
       "name": "ec2-us-west-2",
       "type": "amazon-ebs",
       "region": "us-west-2",
-      "source_ami": "ami-e535c59d",
+      "source_ami_filter": {
+        "filters": {
+          "virtualization-type": "hvm",
+          "name": "CentOS Linux 7 x86_64 HVM EBS*",
+          "root-device-type": "ebs"
+        },
+        "owners": ["679593333241"],
+        "most_recent": true
+        },
       "run_tags": {
         "Name": "Packer Builder - {{user `ami_name`}} {{isotime | clean_ami_name}}"
       },
