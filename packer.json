@@ -73,5 +73,10 @@
         "sudo rm -rf /tmp/resources"
       ]
     }
-  ]
+  ],
+  "post-processors": [
+      {
+        "type": "manifest"
+      }
+    ]
 }
