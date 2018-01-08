@@ -17,7 +17,7 @@ pipeline {
             }
             steps {
                 echo 'Build Machine Image'
-                sh 'packer build packer.json'
+                sh 'packer build -color=false packer.json'
             }
         }
     }
