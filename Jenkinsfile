@@ -18,6 +18,8 @@ pipeline {
             steps {
                 echo 'Build Machine Image'
                 sh 'packer build -color=false packer.json'
+                archiveArtifacts 'packer-manifest.json'
+                stash name: 'build-manifest', includes: 'packer-manifest.json'
             }
         }
     }
