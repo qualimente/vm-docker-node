@@ -1,5 +1,9 @@
 pipeline {
     agent none
+    triggers {
+        cron('H 1 * * *')
+        pollSCM('*/5 * * * *')
+    }
     stages {
         stage('Validate') {
             agent { docker 'hashicorp/packer:full' }
