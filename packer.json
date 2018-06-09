@@ -25,6 +25,7 @@
         "Name": "Packer Builder - {{user `ami_name`}} {{isotime | clean_ami_name}}"
       },
       "ami_regions": ["us-east-1", "us-east-2"],
+      "subnet_id": "subnet-3c975074",
       "instance_type": "t2.medium",
       "communicator": "ssh",
       "ssh_pty": true,
@@ -62,7 +63,7 @@
         "sudo systemctl start auditd.service",
         "sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo",
         "sudo yum install -y yum-utils device-mapper-persistent-data lvm2",
-        "sudo yum install -y docker-ce-17.09.0.ce-1.el7.centos",
+        "sudo yum install -y docker-ce-18.03.1.ce-1.el7.centos",
         "sudo systemctl daemon-reload",
         "sudo systemctl enable docker",
         "sudo systemctl restart docker",
