@@ -3,7 +3,8 @@
   "log-driver": "json-file",
   "log-opts": {
     "max-file": "3",
-    "max-size": "100m"
+    "max-size": "100m",
+    "tag" : "{{.Name}}-{{.ID}}"
   },
   "disable-legacy-registry": true,
   "iptables": true,
