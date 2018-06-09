@@ -25,6 +25,7 @@
         "Name": "Packer Builder - {{user `ami_name`}} {{isotime | clean_ami_name}}"
       },
       "ami_regions": ["us-east-1", "us-east-2"],
+      "subnet_id": "subnet-3c975074",
       "instance_type": "t2.medium",
       "communicator": "ssh",
       "ssh_pty": true,
