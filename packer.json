@@ -52,7 +52,7 @@
       "inline": [
         "sleep 60",
         "sudo yum update -y",
-        "sudo yum install -y yum-utils",
+        "sudo yum install -y yum-utils git",
         "sudo sed -i 's/^Defaults.*requiretty$/Defaults    !requiretty/' /etc/sudoers",
         "sudo mkdir -p /etc/docker",
         "sudo ls -ltR /tmp",
